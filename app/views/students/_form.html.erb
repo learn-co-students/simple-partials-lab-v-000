@@ -1,5 +1,5 @@
-<p>
-<% binding.pry %> 
+<%= form_for @student do |f|%>
+ <p>
   <%= f.label :name %>
   <%= f.text_field :name %>
 </p>
@@ -11,3 +11,5 @@
   <%= f.label :birthday %>
   <%= f.date_field :birthday %>
 </p>
+<%= f.submit %>
+<% end %>
