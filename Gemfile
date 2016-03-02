@@ -38,6 +38,8 @@ group :development, :test do
   gem 'annotate'
   gem 'pry-byebug'
   gem 'faker'
+  gem 'pry-rails'
+  gem 'learn-co'
 end
 
 group :development do
