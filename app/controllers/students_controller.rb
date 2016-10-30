@@ -1,6 +1,12 @@
 class StudentsController < ApplicationController
+  
+  def index
+    @students = Student.all
+  end
+
   def new
     @student = Student.new
+    # layout "students"
   end
 
   def create
@@ -10,6 +16,7 @@ class StudentsController < ApplicationController
     else
       render 'new'
     end
+
   end
 
   def edit
@@ -20,9 +27,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-  def index
-    @students = Student.all
-  end
+
 
   def student_params
     params.require(:student).permit(:name, :birthday, :hometown)
