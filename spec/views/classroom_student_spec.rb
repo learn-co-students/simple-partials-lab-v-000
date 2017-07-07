@@ -5,7 +5,7 @@ RSpec.describe "classroom_show_view" do
     view.lookup_context.prefixes = %w[students]
     student = Student.create(name: 'Bobby', hometown: Faker::Address.city, birthday: Faker::Date.between(25.years.ago, 18.years.ago))
     assign(:student, student)
-    render :template => "students/show.html.erb"
+    render :template => "students/show.erb"
     expect(rendered).to match /Bobby/
   end
 
@@ -13,14 +13,14 @@ RSpec.describe "classroom_show_view" do
     view.lookup_context.prefixes = %w[students]
     student = Student.create(name: 'Bobby', hometown: Faker::Address.city, birthday: Faker::Date.between(25.years.ago, 18.years.ago))
     assign(:student, student)
-    render :template => "students/show.html.erb"
+    render :template => "students/show.erb"
     expect(rendered).to render_template(:partial => "students/_student")
   end
 
   it "displays the student information from the partial" do
     student = Student.create(name: 'Bobby', hometown: Faker::Address.city, birthday: Faker::Date.between(25.years.ago, 18.years.ago))
     assign(:student, student)
-    render :partial => "students/student.html.erb"
+    render :partial => "students/student.erb"
     expect(rendered).to match /Bobby/
   end
 end
