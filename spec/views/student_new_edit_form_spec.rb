@@ -22,6 +22,7 @@ RSpec.describe "create and edit form" do
       student = Student.new
       assign(:student, student)
       render :partial => "students/form.html.erb"
+      binding.pry
       expect(rendered).to match /Create Student/
     end
   end
