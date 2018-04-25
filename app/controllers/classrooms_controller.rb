@@ -6,5 +6,6 @@ class ClassroomsController < ApplicationController
 
   def index
     @classrooms = Classroom.all
+    @student = @classroom.oldest_student
   end
 end
