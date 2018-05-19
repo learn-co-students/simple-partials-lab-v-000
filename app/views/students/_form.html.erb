@@ -1,0 +1,19 @@
+<!-- How can I get my render partial to run with form_for
+I needed to add the whole code from the view I couldn't
+only leave the first and last line -->
+
+<%= form_for @student do |f|%>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :hometown %>
+  <%= f.text_field :hometown %>
+</p>
+<p>
+  <%= f.label :birthday %>
+  <%= f.date_field :birthday %>
+</p>
+  <%= f.submit %>
+<% end %>
