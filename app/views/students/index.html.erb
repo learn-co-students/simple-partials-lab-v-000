@@ -1,0 +1,12 @@
+<h1>All Students</h1>
+<ul>
+  <% @students.each do |st| %>
+    <li>
+      <%= link_to st.name, student_path(st) %>
+      <ul>
+        <li><%= st.hometown %></li>
+        <li><%= st.birthday %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>
