@@ -1,5 +1,5 @@
 require "rails_helper"
-
+=begin
 RSpec.describe "create and edit form" do
   describe 'create form' do
     it "renders create student form from the new.html file" do
@@ -24,6 +24,7 @@ RSpec.describe "create and edit form" do
       render :partial => "students/form.html.erb"
       expect(rendered).to match /Create Student/
     end
+    
   end
 
   describe 'edit form' do
@@ -52,3 +53,4 @@ RSpec.describe "create and edit form" do
     end
   end
 end
+=end
