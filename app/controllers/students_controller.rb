@@ -4,6 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def create
+    binding.pry
     @student = Student.new(student_params)
     if @student.save
       redirect_to @student
@@ -25,6 +26,7 @@ class StudentsController < ApplicationController
   end
 
   def student_params
+    binding.pry
     params.require(:student).permit(:name, :birthday, :hometown)
   end
 end
