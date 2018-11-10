@@ -17,6 +17,7 @@ First, fork and clone the lab.
 We've provided a seed file so you can have some data to play around with. Run `rake db:seed` to seed the database.
 
 1. Remove the duplicated code in the `students/edit.html.erb` and `students/new.html.erb` files by making a partial called `students/_form.html.erb`.
+DONE
 2. Remove the duplicated code in the `classrooms/show.html.erb` and `students/show.html.erb` files by making a partial called `students/_student.html.erb`.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/simple-partials-lab' title='Simple Partials Lab'>Simple Partials Lab</a> on Learn.co and start learning to code for free.</p>
