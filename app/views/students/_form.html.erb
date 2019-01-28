@@ -1,0 +1,18 @@
+<%= form_for @student do |f| %>
+<p>
+  <label>Name: </label>
+  <%= @student.name %>
+  <%= text_field_tag :name %>
+</p>
+
+<p>
+  <label>Hometown:</label>
+  <%= text_field_tag :hometown %>
+</p>
+<p>
+  <label>Birthday:</label>
+  <input type='date' name='birthday'>
+</p>
+<%= f.submit %>
+<% end %>
+
