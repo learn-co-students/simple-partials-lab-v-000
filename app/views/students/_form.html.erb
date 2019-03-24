@@ -1,0 +1,18 @@
+<p>
+  <label>Name:</label>
+  <%= text_field_tag :name, @student.name %>
+</p>
+<p>
+  <label>Hometown:</label>
+  <%= text_field_tag :hometown, @student.hometown %>
+</p>
+<p>
+  <label>Birthday:</label>
+  <%= date_field_tag :birthday, @student.birthday.to_s.split(" ")[0] %>
+</p>
+
+<% if self.assigns[:student].id != nil %>
+	<%= submit_tag "Update Student" %>
+<% else %>
+	<%= submit_tag "Create Student" %>
+<% end %>
