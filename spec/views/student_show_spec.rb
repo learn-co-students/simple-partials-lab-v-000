@@ -4,7 +4,7 @@ RSpec.describe "show_view" do
   let(:classroom) { Classroom.create(course_name: 'Math', semester: "Spring #{Time.now.year}") }
   let(:oldest_student) { Student.create(name: "Grandpa",
                         hometown: Faker::Address.city,
-                        birthday: Faker::Date.between(from: 30.years.ago, 29.years.ago)) }
+                        birthday: Faker::Date.between(from: 30.years.ago, to: 29.years.ago)) }
 
   before do
     5.times do
