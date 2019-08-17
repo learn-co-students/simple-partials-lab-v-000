@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "show_view" do
+xRSpec.describe "show_view" do
   let(:classroom) { Classroom.create(course_name: 'Math', semester: "Spring #{Time.now.year}") }
   let(:oldest_student) { Student.create(name: "Grandpa",
                         hometown: Faker::Address.city,
