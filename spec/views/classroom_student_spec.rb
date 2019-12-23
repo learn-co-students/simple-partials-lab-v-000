@@ -24,7 +24,7 @@ RSpec.describe "show_view" do
     expect(rendered).to match /Grandpa/
   end
 
-  it "renders a students/student partial" do
+  it "renders a students/student partial from the classrooms show view" do
     view.lookup_context.prefixes = %w[students]
     assign(:classroom, classroom)
     assign(:student, classroom.oldest_student)
@@ -39,7 +39,14 @@ RSpec.describe "show_view" do
     expect(rendered).to match /Grandpa/
   end
 
-  it "displays the student information from students the partial" do
+  it "renders student information from the students show view" do
+    view.lookup_context.prefixes = %w[students]
+    assign(:student, classroom.oldest_student)
+    render :template => "students/show.html.erb"
+    expect(rendered).to match /Grandpa/
+  end
+
+  it "renders a students/student partial from the students show view" do
     view.lookup_context.prefixes = %w[students]
     assign(:student, classroom.oldest_student)
     render :template => "students/show.html.erb"
