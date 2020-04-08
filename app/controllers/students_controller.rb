@@ -1,11 +1,13 @@
 class StudentsController < ApplicationController
+  before_action :find_student, only: [:show, :edit]
+  
   def new
     @student = Student.new
   end
 
   def create
-    @student = Student.new(student_params)
-    if @student.save
+    @student = Student.create(student_params)
+    if @student.valid?
       redirect_to @student
     else
       render 'new'
@@ -13,11 +15,11 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    @student = Student.find(params[:id])
+    find_student
   end
 
   def show
-    @student = Student.find(params[:id])
+    find_student
   end
 
   def index
@@ -26,5 +28,9 @@ class StudentsController < ApplicationController
 
   def student_params
     params.require(:student).permit(:name, :birthday, :hometown)
+  end
+
+  def find_student
+    @student = Student.find(params[:id])
   end
 end
