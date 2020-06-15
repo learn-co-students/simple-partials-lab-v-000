@@ -1,0 +1,15 @@
+<%= form_for @student do |t| %>
+<p>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+</p>
+<p>
+  <%= t.label :hometown %>
+  <%= t.text_field :hometown %>
+</p>
+<p>
+  <%= t.label :birthday %>
+  <%= t.date_field :birthday %>
+</p>
+  <%= t.submit %>
+<% end %>
