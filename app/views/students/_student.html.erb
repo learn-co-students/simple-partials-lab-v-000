@@ -1,0 +1,19 @@
+<!-- Grab duplicate HTML from students/show.html.erb and classroom/show.html.erb -->
+<!-- Why am I getting this error:
+      expecting partial <students/_student> but action rendered <[]>.
+       Expected {} to include "students/_student".
+
+I think it wants me to render the partial for classrooms/show.html.erb-->
+
+
+<ul>
+  <li>
+    Name: <%= @student.name %>
+  </li>
+  <li>
+    Birthday: <%= @student.birthday.strftime("%m/%d/%Y")  %>
+  </li>
+  <li>
+    Hometown: <%= @student.hometown.capitalize %>
+  </li>
+</ul>

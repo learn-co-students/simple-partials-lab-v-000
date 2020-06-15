@@ -1,0 +1,18 @@
+[x] Remove the duplicated code in the `students/edit.html.erb` and `students/new.html.erb` files
+by making a partial called `students/_form.html.erb`.
+
+[ ] Remove the duplicated code in the `classrooms/show.html.erb` and `students/show.html.erb`
+files by making a partial called `students/_student.html.erb`.
+
+Spec order
+1. student_new_edit_form
+2. student_show_spec
+3. classroom_student_spec
+
+
+Take duplicate html and add to _from
+render _form in edit.html
+render _form in new.html
+Take duplicate html to _student
+render _student to classroom/show.html
+render _student to student/_student
