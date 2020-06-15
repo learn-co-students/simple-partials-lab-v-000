@@ -6,7 +6,7 @@
 2. Understand how the name of a partial turns into its filename
 3. Practice rendering partials in a different folder
 
-## Overview
+## Overview.
 
 Flatiron is building out a new system to keep track of students in its classes. You just joined the technical team and see that there's lots of repetition in the view layer of the code base. Use your new knowledge of partials to remove the duplication.
 
