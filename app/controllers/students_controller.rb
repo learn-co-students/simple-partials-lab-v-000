@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
   def new
     @student = Student.new
+    f = "field"
   end
 
   def create
